@@ -2,15 +2,8 @@
 <h2>Colonia</h2>
 
 <p>
-    Colonia é um jogo plataforma 2d desenvolvido em Unity.
+    Projeto Colónia é um jogo plataforma 2d de grande escala desenvolvido em equipe na Unity. Atuei principalmente na evolução arquitetónica do projeto, criação de sistemas centrais de gameplay e refatoração/correções de bugs.
 </p>
-
-<h3>Meu papel</h3>
-<ul>
-    <li>Arquitetura de sistemas</li>
-    <li>Ferramentas internas</li>
-    <li>Correções de bugs</li>
-</ul>
 
 <h3>Tecnologias</h3>
 <ul>
@@ -18,5 +11,41 @@
     <li>C#</li>
 </ul>
 
+<h3>Meu papel</h3>
+<ul>
+    <li>Arquitetura de sistemas</li>
+    <li>Criação de ferramentas internas</li>
+    <li>Correções de bugs e suporte estrutural</li>
+    <li>Refatoração progressiva</li>
+</ul>
+
+<h3>Destaques</h3>
+<ul>
+    <li>
+        <h4>Sistema de Controle</h4>
+        <p>
+            Um sistema de controle desacoplado da origem, permitindo trocar dinamicamente a fonte (input do jogador, AI, scripts, cutscenes) sem alterar o código consumidor. <br>
+            O mesmo sistema é utilizando tanto para o player quanto para os inimigos e chefes, facilitando automação, cutscenes e testes.
+        </p>
+    </li>
+    <li>
+        <h4>Cutscenes e Soft Cutscenes</h4>
+        <p>
+            Criação de diversas cutscenes e soft cutscenes utilizando o sistema de controle unificado, 
+            permitindo transições suaves entre sessões de gameplay e controle scriptado.
+        </p>
+    </li>
+    <li>
+        <h4>FSM + GOAP</h4>
+        <p>
+            Sistema de FSM baseado em GOAP, para o player, inimigos e bosses. <br>
+            Foi arquitetado para ser reutilizável, extensível e modular, permitindo a criação de novos comportamentos e a reutilização deles de forma simples. <br>
+            Inclui ferramentas de editor para configuração e debugging dos comportamentos.
+        </p>
+    </li>
+</ul>
+
 <h3>Demo</h3>
-<a href="https://1gusty.itch.io/project-colonia-demo-1" target="_blank">Itch.io Demo</a>
+<a href="https://1gusty.itch.io/project-colonia-demo-1" target="_blank">Itch.io demo pública</a>
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1VgNpa4GzOI?si=m-5-s1sKYkpztHvH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

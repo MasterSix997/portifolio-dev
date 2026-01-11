@@ -2,7 +2,7 @@
 <h2>Drawbug</h2>
 
 <p>
-    Drawbug é um renderizador de formas de alta porformance, com o foco principal em debug
+    Drawbug é um renderizador de formas de alta performance para Unity, com foco em debug visual e integração com o pipeline de renderização da engine.
 </p>
 
 <h3>Tecnologias</h3>
@@ -11,14 +11,22 @@
     <li>C#</li>
 </ul>
 
+<h3>Detalhes Técnicos</h3>
+<ul>
+    <li>Integração direta com Render Graph</li>
+    <li>Suporte a URP, HDRP e Built-in</li>
+    <li>Arquitetura orientada a API, evitando padrões monolíticos</li>
+    <li>Uso de Jobs e Burst para geração de dados</li>
+    <li>Editor customizado para configuração</li>
+</ul>
+
 <h3>Implementação</h3>
 <p>
-    Possui diversas formas 2D e 3D criadas por código (Cubo, Esfera, Capsula, Cilindro, Setas, ...)<br/>
-    Cada forma possui uma variante solida ou linha.<br/>
-    Todas as chamadas da api são compativeis com o burst, e guardadas em um buffer que é processado em paralelo no final do frame e exibido na tela de forma imediata (1 drawcall).<br/>
+    Possui diversas formas 2D e 3D geradas por código (Cubo, Esfera, Cápsula, Cilindro, Setas, etc), com variação entre modo sólido ou linha.<br/>
+    As chamadas de API são compatíveis com Burst e armazenadas em buffers especializados, processados em paralelo ao final do frame e renderizados em um único draw call.<br/>
     <br/>
-    Pra isso for preciso usar o sistema de Render Graph da unity, uma api mais baixo nivel que fornece metodos para interagir com a renderização interna da engine, jobs system para processamento em paralelo, e unity collections para criar buffers especializados
+    A implementação exigiu o uso do Render Graph da Unity, uma API de baixo nível para integração com o sistema interno de renderização, Job System e Unity Collections para gerenciamento eficiente de memória e paralelismo.
 </p>
 
 <h3>Link</h3>
-<a href="https://github.com/MasterSix997/Drawbug" target="_blank">Github source</a>
+<a href="https://github.com/MasterSix997/Drawbug" target="_blank">Github</a>

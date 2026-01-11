@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modalBody = document.getElementById("modal-body");
     const modalClose = document.getElementById("modal-close");
     const modalOverlay = modal.querySelector(".modal-overlay");
+    modalContent = modal.querySelector(".modal-content");
 
     modalClose.addEventListener("click", closeProjectModal);
     modalOverlay.addEventListener("click", closeProjectModal);
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-let modal, modalBody;
+let modal, modalBody, modalContent;
 
 function openProjectModal(projectId) {
     fetch(`projects/${projectId}.html`)
@@ -54,11 +55,13 @@ function openProjectModal(projectId) {
         })
         .then(html => {
             modalBody.innerHTML = html;
+            modalContent.scrollTop = 0;
             modal.classList.remove("hidden");
             document.body.classList.add("modal-open");
         })
         .catch(error => {
             modalBody.innerHTML = "<p>Failed to load project.</p>";
+            modalContent.scrollTop = 0;
             modal.classList.remove("hidden");
             document.body.classList.add("modal-open");
             console.error(error);
@@ -66,6 +69,7 @@ function openProjectModal(projectId) {
 }
 
 function closeProjectModal() {
+    modalContent.scrollTop = 0;
     modal.classList.add("hidden");
     modalBody.innerHTML = "";
     document.body.classList.remove("modal-open");
