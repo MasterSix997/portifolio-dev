@@ -16,13 +16,15 @@
     */
 
     /* Purple */
-    --color-border: rgb(201, 186, 243);
+    --color-border: rgb(192, 173, 243);
     --color-text-primary: rgb(222, 202, 248);
     --color-text-light: rgb(194, 115, 247);
     --color-glow: rgb(164, 89, 250);
     --color-shadow-text-light: rgba(132, 0, 255, 0.5);
     --color-background-forward-gof: rgb(4, 1, 10);
+    --color-background-body: rgba(29, 10, 34, 0.984);
     --color-accent-primary: rgb(164, 89, 250);
+    --color-accent-primary-hover: rgb(231, 204, 255);
     --color-background-about-skill: rgba(216, 197, 202, 0.068);
     --color-card-bg: rgba(29, 10, 34, 0.984);
     --color-hero-overlay: rgba(0, 0, 0, 0.4);
@@ -39,6 +41,7 @@
 
 html {
     scroll-behavior: smooth;
+    color-scheme: light dark;
 }
 
 body {
@@ -94,7 +97,7 @@ a:hover {
     width: 100%;
     height: 100%;
     z-index: -1;
-    pointer-events: auto; /* Para permitir interação com o canvas hero */
+    pointer-events: auto;
 }
 
 #hero {
@@ -267,7 +270,7 @@ a:hover {
     height: 180px;
     object-fit: cover;
     margin-bottom: 15px;
-    border: 2px solid var(--color-border-card);
+    border: 2px solid var(--color-border);
 }
 
 .project-card h3 {
@@ -323,7 +326,7 @@ body.modal-open {
     width: 100%;
     object-fit: cover;
     margin-bottom: 15px;
-    border: 2px solid var(--color-border-card);
+    border: 2px solid var(--color-border);
 }
 
 #modal-close {
@@ -394,7 +397,7 @@ footer {
     text-align: center;
     padding: 30px 20px;
     background-color: var(--color-background-forward-gof);
-    color: var(--color-text-footer);
+    color: var(--color-text-primary);
     font-size: 0.9em;
 }
 .social-links a {
