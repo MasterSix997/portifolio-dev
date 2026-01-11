@@ -1,0 +1,24 @@
+<img src="projects/ubimgui/cover.png" alt="UBImGui" class="project-thumbnail">
+<h2>UB ImGui</h2>
+
+<p>
+    UB ImGui é uma implementação, wrapper e binds do <a href="https://github.com/ocornut/imgui">Dear ImGui</a> para unity.<br/>
+    Ele te permite criar interface inteiramente por código de forma simple e intuitiva, usando uma api de modo imediato.
+</p>
+
+<h3>Tecnologias</h3>
+<ul>
+    <li>Unity</li>
+    <li>C#</li>
+    <li>C++</li>
+</ul>
+
+<h3>Implementação</h3>
+<p>
+    Primeiro foi criado o <a href="https://github.com/MasterSix997/SharpImGui" target="_blank">SharpImgui</a>, um gerador de binds de c++ para c#.<br>
+    Foi feito ajustes na api para ser compativel com a unity (abstrair funções inseguras, criar delegates para eventos do c++). <br>
+    E a parte mais desafiadora que foi criar um backend da unity, converter texturas da engine em texturas nativas, renderizar na tela do jogo, mandar inputs da engine para a api, ciclo de vida correto.
+</p>
+
+<h3>Link</h3>
+<a href="https://github.com/MasterSix997/UBImGui" target="_blank">Github source</a>

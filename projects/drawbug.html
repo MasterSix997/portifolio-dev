@@ -1,0 +1,24 @@
+<img src="projects/drawbug/cover.jpg" alt="Drawbug" class="project-thumbnail">
+<h2>Drawbug</h2>
+
+<p>
+    Drawbug é um renderizador de formas de alta porformance, com o foco principal em debug
+</p>
+
+<h3>Tecnologias</h3>
+<ul>
+    <li>Unity</li>
+    <li>C#</li>
+</ul>
+
+<h3>Implementação</h3>
+<p>
+    Possui diversas formas 2D e 3D criadas por código (Cubo, Esfera, Capsula, Cilindro, Setas, ...)<br/>
+    Cada forma possui uma variante solida ou linha.<br/>
+    Todas as chamadas da api são compativeis com o burst, e guardadas em um buffer que é processado em paralelo no final do frame e exibido na tela de forma imediata (1 drawcall).<br/>
+    <br/>
+    Pra isso for preciso usar o sistema de Render Graph da unity, uma api mais baixo nivel que fornece metodos para interagir com a renderização interna da engine, jobs system para processamento em paralelo, e unity collections para criar buffers especializados
+</p>
+
+<h3>Link</h3>
+<a href="https://github.com/MasterSix997/Drawbug" target="_blank">Github source</a>

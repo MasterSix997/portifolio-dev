@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterSix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ======== HERO SECTION (START) ======== -->
+    <canvas id="gameOfLifeCanvasHero"></canvas>
+
+    <section id="hero" class="fullscreen-section">
+    <div class="hero-content">
+        <img src="images/privateinvestocat.jpg" alt="Profile Image" id="dev-pic">
+        <h1 id="dev-name">Igor Silva</h1>
+        <p id="dev-description">Desenvolvedor de jogos e sistemas em Unity</p>
+    </div>
+    <a href="#about" class="scroll-down-indicator">
+        <span>▼</span>
+    </a>
+    </section>
+
+    <!-- ======== ABOUT ME SECTION ======== -->
+    <section id="about" class="content-section about-fullscreen">
+        <div class="about-content-wrapper">
+            <h2>Sobre mim</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>Olá! Sou Igor da silva, um desenvolvedor de jogos e sistemas, com um interesse especial em arquitetura, mecânicas complexas e ferramentas auxiliares.</p>
+                    <br/>
+                    <p>Tenho experiencia com desenvolvimento de jogos e sistemas, atuando tanto em projetos open source quanto comerciais.</p>
+                </div>
+                <div class="skills">
+                    <h3>Minhas Habilidades</h3>
+                    <ul>
+                        <li>C# (ASP.NET, .NET Framework)</li>
+                        <li>Unity</li>
+                        <li>Lua</li>
+                        <li>Rust</li>
+                        <li>Git & GitHub/GitLab</li>
+                        <li>Padrões de desenvolvimento</li>
+                        <li>Metodologias Ágeis (Scrum)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== PROJECTS SECTION ======== -->
+     <section id="projects" class="content-section">
+        <h2 id="projects-title">Meus trabalhos</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-project-id="colonia">
+                <img src="projects/colonia/cover.png" alt="Colonia" class="project-thumbnail">
+                <h3>Colonia</h3>
+            </div>
+            <div class="project-card" data-project-id="drawbug">
+                <img src="projects/drawbug/cover.jpg" alt="Drawbug" class="project-thumbnail">
+                <h3>Drawbug</h3>
+            </div>
+            <div class="project-card" data-project-id="ubimgui">
+                <img src="projects/ubimgui/cover.png" alt="UB ImGui" class="project-thumbnail">
+                <h3>UB ImGui</h3>
+            </div>
+            <div class="project-card" data-project-id="mastersm">
+                <img src="images/privateinvestocat.jpg" alt="Blog Delta" class="project-thumbnail">
+                <h3>MasterSM</h3>
+            </div>
+        </div>
+    </section>
+
+    <div id="project-modal" class="hidden">
+        <div class="modal-overlay"></div>
+        
+        <div class="modal-content">
+            <button id="modal-close" aria-label="Fechar modal">x</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- ======== FOOTER ======== -->
+     <footer>
+        <p>&copy; <span id="currentYear"></span> Igor Silva.</p>
+        <div class="social-links">
+            <a href="https://github.com/MasterSix997" target="_blank">GitHub</a>
+            <a href="https://discord.com/users/570766890558029854" target="_blank">Discord (mastersix)</a>
+            <a href="mailto:igork7silva@gmail.com" target="_blank">E-Mail (igork7silva@gmail.com)</a>
+        </div>
+    </footer>
+
+    <script src="gameoflife.js"></script>
+    <script src="script.js"></script>
+    <script src="dev.js"></script>
+</body>
+</html>
